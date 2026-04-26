@@ -7,6 +7,7 @@ function ItemForm({ initialValues, onSubmit, submitText }) {
       category: "",
       price: "",
       description: "",
+      manufacturerCountry: "",
       imageUrl: "",
     }
   );
@@ -48,6 +49,14 @@ function ItemForm({ initialValues, onSubmit, submitText }) {
         name="description"
         rows="4"
         value={formData.description}
+        onChange={handleChange}
+        required
+      />
+
+      <label>Manufacturer Country</label>
+      <input
+        name="manufacturerCountry"
+        value={formData.manufacturerCountry || ""}
         onChange={handleChange}
         required
       />
